@@ -1,0 +1,492 @@
+/* ============================================
+   VARIABLES Y COLORES UNIVERSIDAD LIBRE
+   ============================================ */
+:root {
+    --rojo-libre: #C1272D;
+    --negro-libre: #1a1a1a;
+    --blanco: #FFFFFF;
+    --gris-claro: #f5f5f5;
+    --gris-medio: #e0e0e0;
+    --gris-oscuro: #666;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0 8px 16px rgba(193, 39, 45, 0.2);
+    --border-radius: 12px;
+}
+
+/* ============================================
+   RESET Y ESTILOS GENERALES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    color: var(--negro-libre);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    background: linear-gradient(135deg, var(--rojo-libre) 0%, #9a1f24 100%);
+    color: var(--blanco);
+    padding: 30px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+    background: white;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--negro-libre);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--rojo-libre);
+    border-radius: 2px;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--rojo-libre);
+    color: var(--blanco);
+}
+
+.btn-primary:hover {
+    background: #9a1f24;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(193, 39, 45, 0.4);
+}
+
+.btn-secondary {
+    background: var(--negro-libre);
+    color: var(--blanco);
+}
+
+.btn-secondary:hover {
+    background: #333;
+}
+
+.btn-success {
+    background: #28a745;
+    color: var(--blanco);
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-small {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   WORKSPACE
+   ============================================ */
+.workspace {
+    background: var(--blanco);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--sombra);
+    margin-top: 30px;
+}
+
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ============================================
+   FORMULARIOS
+   ============================================ */
+.input-section {
+    background: var(--gris-claro);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+}
+
+.input-section h3 {
+    color: var(--rojo-libre);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--negro-libre);
+    min-width: 220px;
+}
+
+.form-group input {
+    padding: 10px 15px;
+    border: 2px solid var(--gris-medio);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--rojo-libre);
+}
+
+/* ============================================
+   TABLAS
+   ============================================ */
+.tabla-container {
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+.tabla-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tabla-container th {
+    background: var(--rojo-libre);
+    color: var(--blanco);
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tabla-container td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--gris-medio);
+}
+
+.tabla-container input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 2px solid var(--gris-medio);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.tabla-container input[type="number"]:focus {
+    border-color: var(--rojo-libre);
+    outline: none;
+}
+
+/* ============================================
+   BOTONES DE MÉTODOS
+   ============================================ */
+.methods-buttons {
+    background: var(--gris-claro);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin: 30px 0;
+}
+
+.methods-buttons h3 {
+    color: var(--rojo-libre);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   BOTONES DE ACCIÓN
+   ============================================ */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   RESULTADOS
+   ============================================ */
+.resultados {
+    background: var(--gris-claro);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+    border-left: 5px solid var(--rojo-libre);
+}
+
+.resultados h3 {
+    color: var(--rojo-libre);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.metodo-utilizado {
+    background: var(--blanco);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--rojo-libre);
+    font-size: 1.1rem;
+}
+
+.costo-total {
+    background: var(--rojo-libre);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* ============================================
+   HISTORIAL DE RESULTADOS
+   ============================================ */
+.historial-container {
+    background: var(--blanco);
+    border: 2px solid var(--gris-medio);
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.historial-header {
+    background: var(--negro-libre);
+    color: var(--blanco);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.historial-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.btn-toggle {
+    background: transparent;
+    border: none;
+    color: var(--blanco);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-toggle:hover {
+    transform: scale(1.2);
+}
+
+.historial-content {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.historial-item {
+    background: var(--gris-claro);
+    border-left: 4px solid var(--rojo-libre);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.historial-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--sombra);
+}
+
+.historial-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.historial-item-header strong {
+    color: var(--rojo-libre);
+    font-size: 1.1rem;
+}
+
+.historial-fecha {
+    font-size: 0.85rem;
+    color: var(--gris-oscuro);
+}
+
+.historial-item-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.historial-costo {
+    font-weight: 600;
+    color: var(--negro-libre);
+    font-size: 1rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--negro-libre);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .workspace {
+        padding: 20px;
+    }
+    
+    .workspace-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-group label {
+        min-width: auto;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .historial-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .historial-item-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .btn-small {
+        width: 100%;
+    }
+}
